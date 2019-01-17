@@ -19,11 +19,11 @@
   
     return new Promise(function (resolve, reject) {
       // subscribe to the changes via Pusher
-//       var pusher = new Pusher('6d64376912ea0d11ff5a', {
-//         cluster: 'eu',
-//         forceTLS: true,
-//         authEndpoint: "auth.php"
-//       });
+      var pusher = new Pusher('6d64376912ea0d11ff5a', {
+        cluster: 'eu',
+        forceTLS: true,
+        authEndpoint: "auth.php" // This line should point to your server for the authentication
+      });
       var channel = pusher.subscribe(id);
       channel.bind('client-text-edit', function(html) {
         // save the current position
