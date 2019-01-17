@@ -22,7 +22,7 @@
       var pusher = new Pusher('6d64376912ea0d11ff5a', {
         cluster: 'eu',
         forceTLS: true,
-        // authEndpoint: "auth.php"
+        authEndpoint: "auth.php"
       });
       var channel = pusher.subscribe(id);
       channel.bind('client-text-edit', function(html) {
